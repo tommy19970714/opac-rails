@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nbc: MyString
+  isbn: MyString
+  tr: MyString
+  author: MyString
+  publisher: MyString
+  date: MyString
+
+two:
+  nbc: MyString
+  isbn: MyString
+  tr: MyString
+  author: MyString
+  publisher: MyString
+  date: MyString
