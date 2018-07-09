@@ -9,6 +9,7 @@ class TopsController < ApplicationController
     @word = params[:q]
     # @books = Book.where('tr LIKE ?', '%'+@word+'%')
     @q = Book.ransack(@word)
-    @books = @q.result(distinct: true)
+    @result = @q.result(distinct: true)
+    @books = @result.page(params[:page]).per(20)
   end
 end

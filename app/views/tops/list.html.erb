@@ -22,7 +22,7 @@
     </div>
 <% end %>
 
-<h5>検索結果 <%= @books.count %>件</h5>
+<h5>検索結果 <%= @result.count %>件</h5>
 
 
 <%  @books.each do |book| %> 
@@ -35,3 +35,5 @@
         </div>
     </div>
 <%  end %>
+
+<%= paginate @books %>
