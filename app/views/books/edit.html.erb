@@ -3,4 +3,8 @@
 <%= render 'form', book: @book %>
 
 <%= link_to 'Show', @book %> |
+<a href="javascript:history.back()">Back</a>
+
+<% if false #comment out %>
 <%= link_to 'Back', books_path %>
+<% end %>

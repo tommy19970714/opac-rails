@@ -1,4 +1,37 @@
-<h1><%= @word %></h1>
+<%= search_form_for @q, url: list_path do |f| %>
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="card card-sm">
+                <div class="card-body row no-gutters align-items-center">
+                <i class="fa fa-search"></i>
+                    <div class="col-auto">
+                        <i class="icon-magnifying-glass h4 text-body"></i>
+                    </div>
+                    <!--end of col-->
+                    <div class="col">
+                        <%= f.search_field :tr_or_author_cont , class: "form-control form-control-lg form-control-borderless", placeholder: "Search topics or keywords" %>
+                    </div>
+                    <!--end of col-->
+                    <div class="col-auto">
+                        <button class="btn btn-lg btn-success" type="submit">Search</button>
+                    </div>
+                    <!--end of col-->
+                </div>
+            </div>
+        </div>
+    </div>
+<% end %>
+
+<h5>検索結果 <%= @books.count %>件</h5>
+
+
 <%  @books.each do |book| %> 
-    <p><%= book.tr %></p>
+    <div class="card" id="item">
+        <div class="card-body">
+            <h5 class="card-title"><%= book.tr %></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><%= book.author %>　<%= book.date %></h6>
+            <p class="card-text" id="left"><%= book.publisher %> </p>
+            <p class="card-text" id="right"><%= link_to 'Show', book %> <%= link_to 'Edit', edit_book_path(book) %></p>
+        </div>
+    </div>
 <%  end %>

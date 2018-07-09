@@ -37,3 +37,24 @@ input[type="color"]:focus,
     0 0 0px rgba(126, 239, 104, 0.6);
   outline: 0 none;
 }
+
+#detail {
+  width: 40%;
+  margin: 20px auto;
+}
+
+#logo {
+  margin-top: 5%;
+  width: 450px;
+  height: 202px;
+}
+
+#item {
+  margin-top: 15px;
+}
+#left {
+  float: left;
+}
+#right {
+  float: right;
+}
